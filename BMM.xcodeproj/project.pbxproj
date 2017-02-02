@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40BE96181E43BA120005FF8F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40BE96171E43BA120005FF8F /* main.cpp */; };
+		40BE96211E43BA830005FF8F /* MomentMatching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40BE961E1E43BA830005FF8F /* MomentMatching.cpp */; };
+		40BE96221E43BA830005FF8F /* SPN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40BE961F1E43BA830005FF8F /* SPN.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		40BE96141E43BA120005FF8F /* BMM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BMM; sourceTree = BUILT_PRODUCTS_DIR; };
-		40BE96171E43BA120005FF8F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		40BE961E1E43BA830005FF8F /* MomentMatching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MomentMatching.cpp; sourceTree = "<group>"; };
+		40BE961F1E43BA830005FF8F /* SPN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPN.cpp; sourceTree = "<group>"; };
+		40BE96201E43BA830005FF8F /* SPN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPN.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		40BE96161E43BA120005FF8F /* BMM */ = {
 			isa = PBXGroup;
 			children = (
-				40BE96171E43BA120005FF8F /* main.cpp */,
+				40BE961E1E43BA830005FF8F /* MomentMatching.cpp */,
+				40BE961F1E43BA830005FF8F /* SPN.cpp */,
+				40BE96201E43BA830005FF8F /* SPN.h */,
 			);
 			path = BMM;
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40BE96181E43BA120005FF8F /* main.cpp in Sources */,
+				40BE96211E43BA830005FF8F /* MomentMatching.cpp in Sources */,
+				40BE96221E43BA830005FF8F /* SPN.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +222,11 @@
 		40BE961C1E43BA120005FF8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/usr/local/include/eigen3/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +234,11 @@
 		40BE961D1E43BA120005FF8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/usr/local/include/eigen3/",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
